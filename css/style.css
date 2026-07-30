@@ -1,2 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+html{
+    font-family: 'Lexend', sans-serif;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px repeat(6, 56px) 32px repeat(3, 56px);
+    /* logo row, 6 main links, gap row, 3 secondary links */
+    background: #1e88e5;
+    width: 350px;
+    row-gap: 0px;
+}
+
+#logo {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    column-gap: 12px;
+    padding-left: 24px;
+    filter: brightness(0) invert(1);
+
+}
+
+#nav-links {
+    display: grid;
+    grid-template-rows: repeat(6, 56px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links-secondary {
+    display: grid;
+    grid-template-rows: repeat(3, 56px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links li a,
+#nav-links-secondary li a {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    column-gap: 16px;
+    height: 56px;
+    padding-left: 24px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+}
+
+#nav-links li a img,
+#nav-links-secondary li a img {
+    width: 24px;
+    height: 24px;
+    justify-self: start;
+    filter: brightness(0) invert(1);
+}
